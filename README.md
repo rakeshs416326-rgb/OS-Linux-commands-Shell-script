@@ -25,11 +25,13 @@ Testing the commands for the desired output.
 cat > file1
 ```
 chanchal singhvi
-c.k. shukla
+c.k. skukla
 s.n. dasgupta
 sumit chakrobarty
 ^d
 ```
+
+
 cat > file2
 ```
 anil aggarwal
