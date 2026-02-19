@@ -112,30 +112,23 @@ hello world
 ``
 grep Hello newfile 
 ## OUTPUT
+![git ](grep.png)
 
-
-![Alt text](grep.png)
 grep hello newfile 
 ## OUTPUT
-
 ![Alt text](grep.png)
-
 
 grep -v hello newfile 
 ## OUTPUT
-
 ![Alt text](<grep -v.png>)
 
 cat newfile | grep -i "hello"
 ## OUTPUT
-
 ![Alt text](<grep -i.png>)
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
-
-
 ![Alt text](<grep -i -c.png>)
 
 grep -R ubuntu /etc
