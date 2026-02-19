@@ -397,8 +397,8 @@ gunzip backup.tar.gz
  
 # Shell Script
 ```
-echo '#!/bin/sh' > my-script.sh
-echo 'echo Hello World‘; exit 0 >> my-script.sh
+
+echo 'echo Hello World' > myscript.sh exit 0 >> my-script.sh
 ```
 chmod 755 my-script.sh
 ./my-script.sh
@@ -415,7 +415,7 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-
+![Alt text](<stop herecheck.png>)
 
 cat < scriptest.sh 
 ```bash
@@ -448,34 +448,35 @@ echo 'The $$ is ' $$
 ps
 ```
  
-chmod 777 scriptest.sh
+chmod 755 scriptest.sh
  
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
 
- 
+ ![Alt text](echo.png)
 ls file1
 ## OUTPUT
-
+![Alt text](<ls file1.png>)
 echo $?
 ## OUTPUT 
+![Alt text](<echo $.png>)
 ./one
 bash: ./one: Permission denied
  
 echo $?
 ## OUTPUT 
+![Alt text](127.png)
  
 abcd
  
 echo $?
  ## OUTPUT
-
+![Alt text](<echo $.png>)
 
  
 # mis-using string comparisons
 
-cat < strcomp.sh 
 ```bash
 \#!/bin/bash
 val1=baseball
@@ -505,11 +506,11 @@ fi
 
 
 
-chmod 755 strcomp.sh
+
  
 ./strcomp.sh 
 ## OUTPUT
-
+![Alt text](if.png)
 
 # check file ownership
 cat < psswdperm.sh 
@@ -536,7 +537,7 @@ fi
  ```
 ./psswdperm.sh
 ## OUTPUT
-
+![Alt text](ownership.png)
 # check if with file location
 cat>ifnested.sh 
 ```bash
@@ -582,7 +583,7 @@ fi
 
 ./ifnested.sh 
 ## OUTPUT
-
+![Alt text](ifnested.png)
 
 
 # using numeric test comparisons
@@ -625,8 +626,8 @@ fi
 $ chmod 755 iftest.sh
  
 $ ./iftest.sh 
-##OUTPUT
-
+## OUTPUT
+![Alt text](iftest.png)
 # check if a file
 cat > ifnested.sh 
 ```bash
@@ -674,8 +675,9 @@ fi
 $ chmod 755 ifnested.sh
  
 $ ./ifnested.sh 
-##OUTPUT
+## OUTPUT
 
+![Alt text](ifnested1.png)
 # looking for a possible value using elif
 cat elifcheck.sh 
 ```bash
@@ -703,7 +705,7 @@ $ chmod 755 elifcheck.sh
  
 $ ./elifcheck.sh 
 ## OUTPUT
-
+![Alt text](postive.png)
 
 # testing compound comparisons
 cat> ifcompound.sh 
@@ -719,7 +721,7 @@ fi
 $ chmod 755 ifcompound.sh
 $ ./ifcompound.sh 
 ## OUTPUT
-
+![Alt text](testing.png)
 # using the case command
 cat >casecheck.sh 
 ```bash
@@ -737,7 +739,9 @@ esac
 ```
 $ chmod 755 casecheck.sh 
  
-$ ./casecheck.sh 
+$ ./casecheck.sh
+## OUTPUT 
+![Alt text](casecheck.png)
  
 cat > whiletest
 ```bash
@@ -753,9 +757,11 @@ done
 $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
+## OUTPUT
+
+ ![Alt text](whiletest.png)
  
- 
-cat untiltest.sh 
+
 ```bash
 \#using the until command
 var1=100
@@ -766,9 +772,12 @@ var1=$[ $var1 - 25 ]
 done
 ``` 
 $ chmod 755 untiltest.sh
+$./untiltest.sh
+
+## OUTPUT
  
  
- 
+ ![Alt text](untiltest.png)
 cat forin1.sh 
 ```bash
 \#!/bin/bash
@@ -780,7 +789,9 @@ done
  ```
  
 $ chmod 755 forin1.sh
- 
+$./forin1.sh
+## OUTPUT
+![Alt text](forin1.png)
  
 cat forin2.sh 
 ```bash
@@ -793,6 +804,9 @@ done
  ```
  
 $ chmod 755 forin2.sh
+ $ ./forin2.sh 
+## OUTPUT
+![Alt text](forin2.png)
  
 cat forin2.sh 
 ```bash
@@ -805,9 +819,8 @@ done
 ```
 $ chmod 755 forin2.sh
  
-$ ./forin2.sh 
- 
-cat forin3.sh 
+
+cat > forin3.sh 
 ```bash
 \#!/bin/bash
 \# another example of how not to use the for command
@@ -816,8 +829,10 @@ do
 echo "word:$test"
 done
 ```
+$chmod 755 forin3.sh
 $ ./forin3.sh 
- 
+## OUTPUT
+ ![Alt text](forin3.png)
 cat forin1.sh 
 ```bash
 #!/bin/bash
@@ -830,6 +845,7 @@ done
 $ chmod 755 forin1.sh
 
 ## OUTPUT
+
 cat forinfile.sh 
 ```bash
 #!/bin/bash
