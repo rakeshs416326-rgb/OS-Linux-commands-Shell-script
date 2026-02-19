@@ -98,7 +98,7 @@ cut -d "|" -f 2 file22
 ## OUTPUT
 ![Alt text](file22-f2.png)
 
-cat < newfile 
+cat > newfile 
 ```
 Hello world
 hello world
@@ -147,7 +147,7 @@ grep -w -n world newfile
 ## OUTPUT
 ![Alt text](<grep -w -n.png>)
 
-cat < newfile 
+cat > newfile 
 ```
 Hello world
 hello world
@@ -346,7 +346,7 @@ uniq file22
 cat file23 | tr [:lower:] [:upper:]
  ## OUTPUT
 ![Alt text](lower.png)
-cat < urllist.txt
+cat > urllist.txt
 ```
 www. yahoo. com
 www. google. com
@@ -417,7 +417,7 @@ cat herecheck.txt
 ## OUTPUT
 ![Alt text](<stop herecheck.png>)
 
-cat < scriptest.sh 
+cat > scriptest.sh 
 ```bash
 \#!/bin/sh
 echo “File name is $0 ”
@@ -433,7 +433,7 @@ ps
 ^d
  ```
 
-cat scriptest.sh 
+cat >scriptest.sh 
 ```bash
 \#!/bin/sh
 echo “File name is $0 ”
@@ -490,7 +490,7 @@ fi
 ^d
 ```
 
-cat strcomp.sh 
+cat >strcomp.sh 
 ```bash
 \#!/bin/bash
 val1=baseball
@@ -502,18 +502,12 @@ else
 echo "$val1 is less than $val2"
 fi
 ```
-##OUTPUT
-
-
-
-
- 
 ./strcomp.sh 
 ## OUTPUT
 ![Alt text](if.png)
 
 # check file ownership
-cat < psswdperm.sh 
+cat > psswdperm.sh 
 ```bash
 \#!/bin/bash
 if [ -O /etc/passwd ]
@@ -539,7 +533,7 @@ fi
 ## OUTPUT
 ![Alt text](ownership.png)
 # check if with file location
-cat>ifnested.sh 
+cat > ifnested.sh 
 ```bash
 \#!/bin/bash
 if [ -e $HOME ]
@@ -560,7 +554,7 @@ echo “Sorry, the object does not exist”
 fi
 ^d
 ```
-cat ifnested.sh 
+cat >ifnested.sh 
 ```
 \#!/bin/bash
 if [ -e $HOME ]
@@ -606,7 +600,7 @@ fi
 ```
 
 
-cat iftest.sh 
+cat >iftest.sh 
 ```bash
 \#!/bin/bash
 val1=10
@@ -679,7 +673,7 @@ $ ./ifnested.sh
 
 ![Alt text](ifnested1.png)
 # looking for a possible value using elif
-cat elifcheck.sh 
+cat >elifcheck.sh 
 ```bash
 \#!/bin/bash
 if [ $USER = Ram ]
@@ -778,7 +772,7 @@ $./untiltest.sh
  
  
  ![Alt text](untiltest.png)
-cat forin1.sh 
+cat >forin1.sh 
 ```bash
 \#!/bin/bash
 \#basic for command
@@ -793,7 +787,7 @@ $./forin1.sh
 ## OUTPUT
 ![Alt text](forin1.png)
  
-cat forin2.sh 
+cat >forin2.sh 
 ```bash
 \#!/bin/bash
 \# another example of how not to use the for command
@@ -808,18 +802,20 @@ $ chmod 755 forin2.sh
 ## OUTPUT
 ![Alt text](forin2.png)
  
-cat forin2.sh 
+cat >forin2.sh 
 ```bash
 \#!/bin/bash
-\# another example of how not to use the for command
+
 for test in I don't know if this'll work
 do
 echo “word:$test”
 done
-```
-$ chmod 755 forin2.sh
- 
 
+$ chmod 755 forin2.sh
+ $ ./forin2.sh 
+ ## OUTPUT
+
+![Alt text](forin_sh.png)
 cat > forin3.sh 
 ```bash
 \#!/bin/bash
@@ -833,23 +829,24 @@ $chmod 755 forin3.sh
 $ ./forin3.sh 
 ## OUTPUT
  ![Alt text](forin3.png)
-cat forin1.sh 
+ cat > forin1.sh
+
 ```bash
 #!/bin/bash
-# basic for command
+
 for test in Alabama Alaska Arizona Arkansas California Colorado
 do
 echo The next state is $test
 done
-```
+
 $ chmod 755 forin1.sh
 
-## OUTPUT
+! ## OUTPUT
+![Alt text](forin1.sh.png)
 
-cat forinfile.sh 
+cat > forinfile.sh 
 ```bash
 #!/bin/bash
-# reading values from a file
 file="cities"
 for state in `cat $file`
 do
@@ -857,7 +854,7 @@ echo "Visit beautiful $file“
 done
 ```
 $ chmod 777 forinfile.sh
-$ cat cities
+$ cat > cities
 Hyderabad
 Alampur
 Basara
@@ -866,13 +863,15 @@ Adilabad
 Bhadrachalam
 Khammam
 
+cat < cities
+
 ## OUTPUT
+![Alt text](cities.png)
 
-
-cat forctype.sh 
+cat >forctype.sh 
 ```bash
 #!/bin/bash
-# testing the C-style for loop
+
 for (( i=1; i <= 5; i++ ))
 do
 echo "The value of i is $i"
@@ -881,11 +880,11 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
-
-cat forctype1.sh 
+![Alt text](forctype.png)
+cat >forctype1.sh 
 ```bash
 #!/bin/bash
-# multiple variables
+
 for (( a=1, b=5; a <= 5; a++, b-- ))
 do
 echo "$a - $b"
@@ -894,11 +893,10 @@ done
 $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
-
+![Alt text](forctype.png)
 cat fornested1.sh 
 ```bash
 #!/bin/bash
-# nesting for loops
 for (( a = 1; a <= 3; a++ ))
 do
 echo "Starting loop $a:"
@@ -913,11 +911,11 @@ $ chmod 755 fornested1.sh
 $ ./fornested1.sh 
  ## OUTPUT
 
- 
-cat forbreak.sh 
+ ![Alt text](fornested.png)
+cat >forbreak.sh 
 ```bash
 #!/bin/bash
-# breaking out of a for loop
+
 for var1 in 1 2 3 4 5
 do
 if [ $var1 -eq 3 ]
@@ -928,16 +926,17 @@ echo "Iteration number: $var1"
 done
 echo "The for loop is completed“
 ```
-## OUTPUT
 
+![Alt text](forbreak.png)
 $ chmod 755 forbreak.sh
  
 $ ./forbreak.sh 
+## OUTPUT
  
-cat forbreak.sh 
+cat >forcontinue.sh
 ```bash
 #!/bin/bash
-# breaking out of a for loop
+
 for var1 in 1 2 3 4 5
 do
 if [ $var1 -eq 3 ]
@@ -954,11 +953,11 @@ $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
- 
-cat exread.sh 
+ ![Alt text](forcontinue.png)
+cat >exread.sh 
 ```bash
 #!/bin/bash
-# testing the read command
+
 echo -n "Enter your name: "
 read name
 echo "Hello $name, welcome to my program. "
@@ -968,27 +967,11 @@ $ chmod 755 exread.sh
  
 $ ./exread.sh 
 ## OUTPUT
+![Alt text](exread.png)
 
-
- cat exread1.sh
+cat >funcex.sh
 ```bash
 #!/bin/bash
-# testing the read command
-read -p "Enter your name: " name
-echo "Hello $name, welcome to my program. “
-``` 
-$ chmod 755 exread1.sh 
-
-## OUTPUT
-
-
-
-$ ./exread1.sh 
- 
-cat funcex.sh
-```bash
-#!/bin/bash
-# trying to access script parameters inside a function
 function func {
 echo $[ $1 * $2 ]
 }
@@ -1000,14 +983,13 @@ else
 echo "Usage: badtest1 a b"
 fi
 ```
-## OUTPUT
  ./funcex.sh 
-
- 
  ./funcex.sh 1 2
-
+## OUTPUT
+![Alt text](funcex1.png)
+![Alt text](funcex2.png)
  
-cat argshift.sh
+cat >argshift.sh
 ```bash
 #!/bin/bash 
  while (( "$#" )); do 
@@ -1016,28 +998,27 @@ cat argshift.sh
 done
 ```
 $ chmod 777 argshift.sh
-
-## OUTPUT
 $ ./argshift.sh 1 2 3
+## OUTPUT
+![Alt text](argshift.png)
  
- cat argshift1.sh
+ cat >argshift1.sh
 ```bash
- #/bin/bash 
- # store arguments in a special array 
+#!/bin/bash 
 args=("$@") 
-# get number of elements 
+
 ELEMENTS=${#args[@]} 
- # echo each element in array  
-# for loop 
+
 for (( i=0;i<$ELEMENTS;i++)); do 
     echo ${args[${i}]} 
 done
 ```
 $ chmod 777 argshift.sh
-## OUTPUT
 $ ./argshift.sh 1 2 3
+## OUTPUT
+![Alt text](argshift1.png)
  
-cat argshift.sh
+cat >argshift.sh
 ```bash
 #!/bin/bash 
 set -x 
@@ -1047,12 +1028,14 @@ while (( "$#" )); do
 done
 set +x
 ```
-## OUTPUT
  ./argshift.sh 1 2 3
- 
+## OUTPUT
+
+ ![Alt text](argshift2.png)
  
 cat > nc.awk
 ```bash
+
 BEGIN{}
 {
 print len=length($0),"\t",$0 
@@ -1080,7 +1063,7 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- 
+ ![Alt text](awk.png)
 cat > palindrome.sh
 ```bash
 #num=545
@@ -1107,7 +1090,7 @@ else
 fi
 ```
 ## OUTPUT 
-
+![Alt text](palindrome.png)
 
 # RESULT:
 The Commands are executed successfully.
