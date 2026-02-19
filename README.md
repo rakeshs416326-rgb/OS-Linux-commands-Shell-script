@@ -112,12 +112,7 @@ hello world
 ``
 grep Hello newfile 
 ## OUTPUT
-![git ](grep.png)
-
-grep hello newfile 
-## OUTPUT
 ![Alt text](grep.png)
-
 grep -v hello newfile 
 ## OUTPUT
 ![Alt text](<grep -v.png>)
@@ -1082,6 +1077,8 @@ else
 	echo "Number is NOT palindrome"
 fi
 ```
+$ chmod 777 palindrome.sh
+$ ./palindrome.sh
 ## OUTPUT 
 ![Alt text](palindrome.png)
 
