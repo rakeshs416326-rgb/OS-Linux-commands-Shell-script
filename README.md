@@ -373,6 +373,7 @@ chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
 ![Alt text](myscript.png)
+
 cat << stop > herecheck.txt
 ```
 hello in this world
@@ -422,18 +423,19 @@ chmod 755 scriptest.sh
 ./scriptest.sh 1 2 3
 
 ## OUTPUT
-
 ![Alt text](echo.png)
+
 ls file1
 ## OUTPUT
-
 ![Alt text](<ls file1.png>)
+
 echo $?
 ## OUTPUT 
-
 ![Alt text](<echo $.png>)
 ./one
+
 bash: ./one: Permission denied
+
 echo $?
 ## OUTPUT 
 ![Alt text](127.png)
