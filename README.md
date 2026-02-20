@@ -334,21 +334,11 @@ www. yahoo. com
 www. google. com
 www. mrcet.... com
 ^d
- ```
-cat > urllist.txt
-```
-www. yahoo. com
-www. google. com
-www. mrcet.... com
- ```
- ## OUTPUT
 
-
- 
+ ```
 cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
-
-![Alt text](<cat urllist.png>)
+![Alt text](urllist.png)
 
 #Backup commands
 tar -cvf backup.tar *
