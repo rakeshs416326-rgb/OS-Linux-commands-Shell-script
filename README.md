@@ -52,18 +52,19 @@ cat < file2
 ![Alt text](file2.png)
 
 # Comparing Files
+
 cmp file1 file2
 ## OUTPUT
  ![Alt text](cmp.png)
+
 comm file1 file2
  ## OUTPUT
+![Alt text](comm.png)
 
- ![Alt text](comm.png)
 diff file1 file2
 ## OUTPUT
-
 ![Alt text](diff.png)
-#Filters
+# Filters
 
 ### Create the following files file11, file22 as follows:
 
@@ -84,16 +85,12 @@ cat > file22
 
 cut -c1-3 file11
 ## OUTPUT
-
 ![Alt text](file11.png)
-
-
 
 cut -d "|" -f 1 file22
 ## OUTPUT
-
-
 ![Alt text](file22.png)
+
 cut -d "|" -f 2 file22
 ## OUTPUT
 ![Alt text](file22-f2.png)
@@ -115,7 +112,6 @@ grep -v hello newfile
 cat newfile | grep -i "hello"
 ## OUTPUT
 ![Alt text](grepi.png)
-
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
@@ -150,23 +146,18 @@ Linux is best in this World
  ```
 egrep -w 'Hello|hello' newfile 
 ## OUTPUT
-
 ![Alt text](<egrep -w.png>)
 
 egrep -w '(H|h)ello' newfile 
 ## OUTPUT
-
 ![Alt text](<egrep -w H.png>)
 
 egrep -w '(H|h)ell[a-z]' newfile 
 ## OUTPUT
-
 ![Alt text](<egrep -w h.png>)
-
 
 egrep '(^hello)' newfile 
 ## OUTPUT
-
 ![Alt text](<egrep hello.png>)
 
 egrep '(world$)' newfile 
@@ -180,31 +171,28 @@ egrep '(World$)' newfile
 
 egrep '((W|w)orld$)' newfile 
 ## OUTPUT
-
 ![Alt text](<egrep W.png>)
 
 egrep '[1-9]' newfile 
 ## OUTPUT
-
-
 ![Alt text](<egrep 1-9.png>)
+
 egrep 'Linux.*world' newfile 
 ## OUTPUT
-
 ![Alt text](<egrep linux 1.png>)
+
 egrep 'Linux.*World' newfile 
 ## OUTPUT
 ![Alt text](<grep linux 2.png>)
 
 egrep l{2} newfile
 ## OUTPUT
-
 ![Alt text](<egrep l2.png>)
 
 egrep 's{1,2}' newfile
 ## OUTPUT 
-
 ![Alt text](<egreps 12.png>)
+
 cat > file23
 ```
 1001 | Ram | 10000 | HR
@@ -227,20 +215,16 @@ sed -n -e '3p' file23
 ## OUTPUT
 ![Alt text](<sed -n -e.png>)
 
-
 sed  -e 's/Ram/Sita/' file23
 ## OUTPUT
-
 ![Alt text](sedram.png)
 
 sed  -e '2s/Ram/Sita/' file23
 ## OUTPUT
-
 ![Alt text](<sed -e2.png>)
 
 sed  '/tom/s/5000/6000/' file23
 ## OUTPUT
-
 ![Alt text](<sed tom.png>)
 
 sed -n -e '1,5p' file23
@@ -251,8 +235,6 @@ sed -n -e '1,5p' file23
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 ![Alt text](<sed joe.png>)
-
-
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
