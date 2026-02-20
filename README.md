@@ -113,27 +113,27 @@ hello world
 grep Hello newfile 
 ## OUTPUT
 ![Alt text](grep.png)
+
 grep -v hello newfile 
 ## OUTPUT
-![Alt text](<grep -v.png>)
+![Alt text](grepv.png)
 
 cat newfile | grep -i "hello"
 ## OUTPUT
-![Alt text](<grep -i.png>)
+![Alt text](grepi.png)
 
 
 cat newfile | grep -i -c "hello"
 ## OUTPUT
-![Alt text](<grep -i -c.png>)
+![Alt text](grepic.png)
 
 grep -R ubuntu /etc
 ## OUTPUT
-
-![Alt text](<grep -R.png>)
+![Alt text](grepr.png)
 
 grep -w -n world newfile   
 ## OUTPUT
-![Alt text](<grep -w -n.png>)
+![Alt text](grepwn.png)
 
 cat > newfile 
 ```
@@ -361,12 +361,10 @@ tar -cvf backup.tar *
 ## OUTPUT
 ![Alt text](tar.png)
 
-mkdir backupdir
- 
+mkdir backupdi
 mv backup.tar backupdir
-
 cd backupdir
- 
+
 tar -tvf backup.tar
 ## OUTPUT
 ![Alt text](<tar -tvf.png>)
