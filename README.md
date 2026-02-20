@@ -231,39 +231,33 @@ sed -n -e '1,5p' file23
 ## OUTPUT
 ![Alt text](<sed 1,5.png>)
 
-
 sed -n -e '2,/Joe/p' file23
 ## OUTPUT
 ![Alt text](<sed joe.png>)
 
 sed -n -e '/tom/,/Joe/p' file23
 ## OUTPUT
-
 ![Alt text](<sed -n -e tom.png>)
 
 seq 10 
 ## OUTPUT
 ![Alt text](seq10.png)
 
-
 seq 10 | sed -n '4,6p'
 ## OUTPUT
-
-
 ![Alt text](seqm4,6.png)
+
 seq 10 | sed -n '2,~4p'
 ## OUTPUT
-
-
 ![Alt text](<seq 2,4.png>)
+
 seq 3 | sed '2a hello'
 ## OUTPUT
 ![Alt text](<seq 2a.png>)
 
-
 seq 2 | sed '2i hello'
-## OUTP![Alt text](<seq 2i.png>)UT
-
+## OUTPUT
+![Alt text](<seq 2i.png>)UT
 
 seq 2 | sed '2i hello'
 ## OUTPUT
@@ -271,14 +265,13 @@ seq 2 | sed '2i hello'
 
 sed -n '2,4{s/^/$/;p}' file23
 ## OUTPUT
-
 ![Alt text](<sed file23.png>)
+
 sed -n '2,4{s/$/*/;p}' file23
 ## OUTPUT
-
 ![Alt text](<sed file23 -n.png>)
 
-#Sorting File content
+# Sorting File content
 cat > file21
 ```
 1001 | Ram | 10000 | HR
@@ -302,13 +295,12 @@ cat > file22
 ``` 
 uniq file22
 ## OUTPUT
-
 ![Alt text](<uniq file22.png>)
 
-#Using tr command
-
+# Using tr command
 cat file23 | tr [:lower:] [:upper:]
- ## OUTPUT
+
+## OUTPUT
 ![Alt text](lower.png)
 cat > urllist.txt
 ```
@@ -322,7 +314,7 @@ cat urllist.txt | tr -d ' ' | tr -s '.'
 ## OUTPUT
 ![Alt text](urllist.png)
 
-#Backup commands
+# Backup commands
 tar -cvf backup.tar *
 ## OUTPUT
 ![Alt text](tar.png)
@@ -338,11 +330,12 @@ tar -tvf backup.tar
 tar -xvf backup.tar
 ## OUTPUT
 ![Alt text](<tar -xvf.png>)
+
 gzip backup.tar
 
 ls .gz
 ## OUTPUT
- ![Alt text](<ls gz.png>)
+![Alt text](<ls gz.png>)
  
 gunzip backup.tar.gz
 ## OUTPUT
@@ -367,7 +360,6 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
-
 ![Alt text](<stop herecheck.png>)
 
 cat > scriptest.sh 
