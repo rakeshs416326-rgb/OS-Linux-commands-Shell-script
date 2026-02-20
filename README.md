@@ -876,11 +876,10 @@ done
 echo "The for loop is completed“
 ```
 
-![Alt text](forbreak.png)
-
 $ chmod 755 forbreak.sh
 $ ./forbreak.sh 
 ## OUTPUT
+![Alt text](forbreak.png)
 
 cat >forcontinue.sh
 ```bash
@@ -897,9 +896,7 @@ done
 echo "The for loop is completed“
 ```
 
- 
 $ chmod 755 forcontinue.sh
- 
 $ ./forcontinue.sh 
 ## OUTPUT
 ![Alt text](forcontinue.png)
