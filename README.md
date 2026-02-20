@@ -103,13 +103,7 @@ cat > newfile
 Hello world
 hello world
 ^d
-````
-cat > newfile
-``` 
-Hello world
-hello world
- ^d
-``
+```
 grep Hello newfile 
 ## OUTPUT
 ![Alt text](grep.png)
