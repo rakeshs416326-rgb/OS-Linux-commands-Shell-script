@@ -860,6 +860,7 @@ $ chmod 755 fornested1.sh
 $ ./fornested1.sh 
  ## OUTPUT
 ![Alt text](fornested.png)
+
 cat >forbreak.sh 
 ```bash
 #!/bin/bash
@@ -880,7 +881,7 @@ $ chmod 755 forbreak.sh
  
 $ ./forbreak.sh 
 ## OUTPUT
- 
+
 cat >forcontinue.sh
 ```bash
 #!/bin/bash
@@ -979,8 +980,7 @@ set +x
 ```
  ./argshift.sh 1 2 3
 ## OUTPUT
-
- ![Alt text](argshift2.png)
+![Alt text](argshift2.png)
  
 cat > nc.awk
 ```bash
@@ -1012,7 +1012,8 @@ ubcdfghj
 ```
 awk -f nc.awk data.dat
 ## OUTPUT 
- ![Alt text](awk.png)
+![Alt text](awk.png)
+
 cat > palindrome.sh
 ```bash
 #num=545
