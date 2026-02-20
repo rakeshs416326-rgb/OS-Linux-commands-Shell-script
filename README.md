@@ -877,8 +877,8 @@ echo "The for loop is completed“
 ```
 
 ![Alt text](forbreak.png)
+
 $ chmod 755 forbreak.sh
- 
 $ ./forbreak.sh 
 ## OUTPUT
 
