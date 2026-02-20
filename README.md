@@ -257,7 +257,7 @@ seq 3 | sed '2a hello'
 
 seq 2 | sed '2i hello'
 ## OUTPUT
-![Alt text](<seq 2i.png>)UT
+![Alt text](<seq 2i.png>)
 
 seq 2 | sed '2i hello'
 ## OUTPUT
@@ -302,6 +302,7 @@ cat file23 | tr [:lower:] [:upper:]
 
 ## OUTPUT
 ![Alt text](lower.png)
+
 cat > urllist.txt
 ```
 www. yahoo. com
@@ -700,10 +701,8 @@ $ chmod 755 whiletest.sh
  
 $ ./whiletest.sh
 ## OUTPUT
-
- ![Alt text](whiletest.png)
+![Alt text](whiletest.png)
  
-
 ```bash
 \#using the until command
 var1=100
@@ -717,9 +716,8 @@ $ chmod 755 untiltest.sh
 $./untiltest.sh
 
 ## OUTPUT
- 
- 
- ![Alt text](untiltest.png)
+![Alt text](untiltest.png)
+
 cat >forin1.sh 
 ```bash
 \#!/bin/bash
@@ -735,7 +733,7 @@ $./forin1.sh
 ## OUTPUT
 ![Alt text](forin1.png)
  
-cat >forin2.sh 
+cat > forin2.sh 
 ```bash
 \#!/bin/bash
 \# another example of how not to use the for command
@@ -760,7 +758,7 @@ echo “word:$test”
 done
 
 $ chmod 755 forin2.sh
- $ ./forin2.sh 
+$ ./forin2.sh 
  ## OUTPUT
 
 ![Alt text](forin_sh.png)
@@ -774,9 +772,10 @@ echo "word:$test"
 done
 ```
 $chmod 755 forin3.sh
-$ ./forin3.sh 
+$ ./forin3.sh
+
 ## OUTPUT
- ![Alt text](forin3.png)
+ [Alt text](forin3.png)
  cat > forin1.sh
 
 ```bash
@@ -829,6 +828,7 @@ $ chmod 755 forctype.sh
 $ ./forctype.sh 
 ## OUTPUT
 ![Alt text](forctype.png)
+
 cat >forctype1.sh 
 ```bash
 #!/bin/bash
@@ -842,6 +842,7 @@ $ chmod 755 forctype.sh
 $ ./forctype1.sh 
 ## OUTPUT
 ![Alt text](forctype.png)
+
 cat fornested1.sh 
 ```bash
 #!/bin/bash
@@ -858,8 +859,7 @@ $ chmod 755 fornested1.sh
  
 $ ./fornested1.sh 
  ## OUTPUT
-
- ![Alt text](fornested.png)
+![Alt text](fornested.png)
 cat >forbreak.sh 
 ```bash
 #!/bin/bash
@@ -901,7 +901,8 @@ $ chmod 755 forcontinue.sh
  
 $ ./forcontinue.sh 
 ## OUTPUT
- ![Alt text](forcontinue.png)
+![Alt text](forcontinue.png)
+
 cat >exread.sh 
 ```bash
 #!/bin/bash
