@@ -361,6 +361,7 @@ gzip backup.tar
 ls .gz
 ## OUTPUT
  ![Alt text](<ls gz.png>)
+ 
 gunzip backup.tar.gz
 ## OUTPUT
 ![Alt text](gunzip.png)
@@ -432,6 +433,7 @@ ls file1
 echo $?
 ## OUTPUT 
 ![Alt text](<echo $.png>)
+
 ./one
 
 bash: ./one: Permission denied
