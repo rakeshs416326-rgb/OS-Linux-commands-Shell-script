@@ -367,14 +367,12 @@ gunzip backup.tar.gz
  
 # Shell Script
 ```
-
 echo 'echo Hello World' > myscript.sh exit 0 >> my-script.sh
 ```
 chmod 755 my-script.sh
 ./my-script.sh
 ## OUTPUT
-
- 
+![Alt text](myscript.png)
 cat << stop > herecheck.txt
 ```
 hello in this world
@@ -385,6 +383,7 @@ stop
 
 cat herecheck.txt
 ## OUTPUT
+
 ![Alt text](<stop herecheck.png>)
 
 cat > scriptest.sh 
@@ -424,16 +423,17 @@ chmod 755 scriptest.sh
 
 ## OUTPUT
 
- ![Alt text](echo.png)
+![Alt text](echo.png)
 ls file1
 ## OUTPUT
+
 ![Alt text](<ls file1.png>)
 echo $?
 ## OUTPUT 
+
 ![Alt text](<echo $.png>)
 ./one
 bash: ./one: Permission denied
- 
 echo $?
 ## OUTPUT 
 ![Alt text](127.png)
